@@ -14,6 +14,7 @@
     "@nuxt/ui": "^2.18.4",
     "@nuxtjs/color-mode": "^3.4.1",
     "@pinia/nuxt": "^0.5.5",
+    "@productdevbook/chatwoot": "^2.0.0",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "10.11.1",
     "nuxt": "^3.20.1",

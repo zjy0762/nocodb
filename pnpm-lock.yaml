@@ -29,6 +29,9 @@ importers:
       '@pinia/nuxt':
         specifier: ^0.5.5
         version: 0.5.5(typescript@5.9.3)(vue@3.5.24)
+      '@productdevbook/chatwoot':
+        specifier: ^2.0.0
+        version: 2.0.0(vue@3.5.24)
       '@vueuse/core':
         specifier: ^10.11.0
         version: 10.11.1(vue@3.5.24)
@@ -6489,6 +6492,18 @@ packages:
       - supports-color
     dev: false
 
+  /@productdevbook/chatwoot@2.0.0(vue@3.5.24):
+    resolution: {integrity: sha512-9A8LY3Jw+KEA3pKJ3zB4zooq4QJ5IdHDBsFhemMuTb3QI/JO0WeWtV1kPO+DYMuGp/FLaHe3T81fh5pAXSlh6g==}
+    peerDependencies:
+      vue: '>=3.3.0'
+    dependencies:
+      '@nuxt/kit': 3.20.1
+      defu: 6.1.4
+      vue: 3.5.24(typescript@5.9.3)
+    transitivePeerDependencies:
+      - magicast
+    dev: false
+
   /@purge-icons/core@0.10.0:
     resolution: {integrity: sha512-AtJbZv5Yy+vWX5v32DPTr+CW7AkSK8HJx52orDbrYt/9s4lGM2t4KKAmwaTQEH2HYr2HVh1mlqs54/S1s3WT1g==}
     dependencies:
@@ -11111,6 +11126,7 @@ packages:
   /commander@11.1.0:
     resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
     engines: {node: '>=16'}
+    requiresBuild: true
     dev: false
 
   /commander@12.1.0:
@@ -11500,6 +11516,7 @@ packages:
   /css-tree@2.2.1:
     resolution: {integrity: sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
+    requiresBuild: true
     dependencies:
       mdn-data: 2.0.28
       source-map-js: 1.2.1
@@ -11591,6 +11608,7 @@ packages:
   /csso@5.0.5:
     resolution: {integrity: sha512-0LrrStPOdJj+SPCCrGhzryycLjwcgUSHBtxNA8aIDxf0GLsRh1cKYhB00Gd1lDOS4yGH69+SNn13+TWbVHETFQ==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
+    requiresBuild: true
     dependencies:
       css-tree: 2.2.1
     dev: false
@@ -16426,6 +16444,7 @@ packages:
 
   /mdn-data@2.0.28:
     resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}
+    requiresBuild: true
     dev: false
 
   /mdn-data@2.12.2:
