@@ -17,12 +17,15 @@ importers:
 
   packages/nc-gui:
     dependencies:
+      '@ant-design/icons-vue':
+        specifier: ^7.0.1
+        version: 7.0.1(vue@3.5.24)
       '@nuxt/image':
         specifier: ^2.0.0
         version: 2.0.0
       '@nuxt/ui':
         specifier: ^2.18.4
-        version: 2.22.3(vite@7.2.2)(vue@3.5.24)
+        version: 2.22.3(axios@1.13.2)(vite@7.2.2)(vue@3.5.24)
       '@nuxtjs/color-mode':
         specifier: ^3.4.1
         version: 3.5.2
@@ -35,6 +38,9 @@ importers:
       '@vue-flow/core':
         specifier: ^1.47.0
         version: 1.47.0(vue@3.5.24)
+      '@vueuse/components':
+        specifier: ^14.0.0
+        version: 14.0.0(vue@3.5.24)
       '@vueuse/core':
         specifier: ^10.11.0
         version: 10.11.1(vue@3.5.24)
@@ -44,6 +50,18 @@ importers:
       ant-design-vue:
         specifier: ^3.2.20
         version: 3.2.20(vue@3.5.24)
+      axios:
+        specifier: ^1.13.2
+        version: 1.13.2
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
+      dompurify:
+        specifier: ^3.3.0
+        version: 3.3.0
+      lodash-es:
+        specifier: ^4.17.21
+        version: 4.17.21
       nocodb-sdk:
         specifier: ^0.265.1
         version: 0.265.1
@@ -62,12 +80,18 @@ importers:
       vue:
         specifier: ^3.5.24
         version: 3.5.24(typescript@5.9.3)
+      vue-dompurify-html:
+        specifier: ^5.3.0
+        version: 5.3.0(vue@3.5.24)
       vue-i18n:
         specifier: ^9.10.0
         version: 9.14.5(vue@3.5.24)
       vue-router:
         specifier: ^4.4.5
         version: 4.6.3(vue@3.5.24)
+      vue3-clipboard:
+        specifier: ^1.0.0
+        version: 1.0.0(vue@3.5.24)
       vue3-text-clamp:
         specifier: ^0.1.2
         version: 0.1.2(resize-detector@0.3.0)(vue@3.5.24)
@@ -87,6 +111,18 @@ importers:
       '@nuxtjs/eslint-module':
         specifier: ^4.1.0
         version: 4.1.0(eslint@8.57.1)(vite@7.2.2)(webpack@5.102.1)
+      '@types/axios':
+        specifier: ^0.14.0
+        version: 0.14.4
+      '@types/date-fns':
+        specifier: ^2.6.3
+        version: 2.6.3
+      '@types/dompurify':
+        specifier: ^3.2.0
+        version: 3.2.0
+      '@types/lodash-es':
+        specifier: ^4.17.12
+        version: 4.17.12
       '@types/node':
         specifier: ^22.7.5
         version: 22.19.1
@@ -978,6 +1014,16 @@ packages:
 
   /@ant-design/icons-vue@6.1.0(vue@3.5.24):
     resolution: {integrity: sha512-EX6bYm56V+ZrKN7+3MT/ubDkvJ5rK/O2t380WFRflDcVFgsvl3NLH7Wxeau6R8DbrO5jWR6DSTC3B6gYFp77AA==}
+    peerDependencies:
+      vue: '>=3.0.3'
+    dependencies:
+      '@ant-design/colors': 6.0.0
+      '@ant-design/icons-svg': 4.4.2
+      vue: 3.5.24(typescript@5.9.3)
+    dev: false
+
+  /@ant-design/icons-vue@7.0.1(vue@3.5.24):
+    resolution: {integrity: sha512-eCqY2unfZK6Fe02AwFlDHLfoyEFreP6rBwAZMIJ1LugmfMiVgwWDYlp1YsRugaPtICYOabV1iWxXdP12u9U43Q==}
     peerDependencies:
       vue: '>=3.0.3'
     dependencies:
@@ -5122,7 +5168,7 @@ packages:
       - magicast
     dev: false
 
-  /@nuxt/ui@2.22.3(vite@7.2.2)(vue@3.5.24):
+  /@nuxt/ui@2.22.3(axios@1.13.2)(vite@7.2.2)(vue@3.5.24):
     resolution: {integrity: sha512-895SAzqCCT5JAc1JQ8nAmmpwdKCJqArY8ifL/PNtD681FKSdXiSPxODGnpqpovM/ws6bvoRwglA7BtwAJ5ySBg==}
     peerDependencies:
       joi: ^17.13.0
@@ -5156,7 +5202,7 @@ packages:
       '@tailwindcss/forms': 0.5.10(tailwindcss@3.4.18)
       '@tailwindcss/typography': 0.5.19(tailwindcss@3.4.18)
       '@vueuse/core': 13.9.0(vue@3.5.24)
-      '@vueuse/integrations': 13.9.0(fuse.js@7.1.0)(vue@3.5.24)
+      '@vueuse/integrations': 13.9.0(axios@1.13.2)(fuse.js@7.1.0)(vue@3.5.24)
       '@vueuse/math': 13.9.0(vue@3.5.24)
       defu: 6.1.4
       fuse.js: 7.1.0
@@ -8339,7 +8385,7 @@ packages:
     resolution: {integrity: sha512-9JgOaunvQdsQ/qW2OPmE5+hCeUB52lQSolecrFrthct55QekhmXEwT203s20RL+UHtCQc15y3VXpby9E7Kkh/g==}
     deprecated: This is a stub types definition. axios provides its own type definitions, so you do not need this installed.
     dependencies:
-      axios: 1.9.0(debug@4.4.3)
+      axios: 1.13.2
     transitivePeerDependencies:
       - debug
     dev: true
@@ -8418,6 +8464,20 @@ packages:
     resolution: {integrity: sha512-mFNylyeyqN93lfe/9CSxOGREz8cpzAhH+E93xJ4xWQf62V8sQ/24reV2nyzUWM6H6Xji+GGHpkbLe7pVoUEskg==}
     dependencies:
       '@types/node': 22.19.1
+
+  /@types/date-fns@2.6.3:
+    resolution: {integrity: sha512-Ke1lw2Ni1t/wMUoLtKFmSNCLozcTBd6vmMqFP4hRzXn6qzkNt97bPAX0x5Y/c15DP43kKvwW1ycStD5+43jVQA==}
+    deprecated: This is a stub types definition. date-fns provides its own type definitions, so you do not need this installed.
+    dependencies:
+      date-fns: 4.1.0
+    dev: true
+
+  /@types/dompurify@3.2.0:
+    resolution: {integrity: sha512-Fgg31wv9QbLDA0SpTOXO3MaxySc4DKGLi8sna4/Utjo4r3ZRPdCt4UQee8BWr+Q5z21yifghREPJGYaEOEIACg==}
+    deprecated: This is a stub types definition. dompurify provides its own type definitions, so you do not need this installed.
+    dependencies:
+      dompurify: 3.3.0
+    dev: true
 
   /@types/ejs@3.1.5:
     resolution: {integrity: sha512-nv+GSx77ZtXiJzwKdsASqi+YQ5Z7vwHsTP0JY2SiQgjGckkBRKZnk8nIM+7oUZ1VCtuTz0+By4qVR7fqzp/Dfg==}
@@ -8536,6 +8596,16 @@ packages:
     dependencies:
       '@types/ms': 2.1.0
       '@types/node': 22.19.1
+    dev: true
+
+  /@types/lodash-es@4.17.12:
+    resolution: {integrity: sha512-0NgftHUcV4v34VhXm8QBSftKVXtbkBG3ViCjs6+eJ5a6y6Mi/jiFGPc1sC7QK+9BFhWrURE3EOggmWaSxL9OzQ==}
+    dependencies:
+      '@types/lodash': 4.17.20
+    dev: true
+
+  /@types/lodash@4.17.20:
+    resolution: {integrity: sha512-H3MHACvFUEiujabxhaI/ImO6gUrd8oOurg7LQtS7mbwIXA/cUqWrvBsaeJ23aZEPk1TAYkurjfMbSELfoCXlGA==}
     dev: true
 
   /@types/methods@1.1.4:
@@ -8776,7 +8846,6 @@ packages:
   /@types/trusted-types@2.0.7:
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
     requiresBuild: true
-    dev: false
     optional: true
 
   /@types/validator@13.15.9:
@@ -9483,6 +9552,16 @@ packages:
   /@vue/shared@3.5.24:
     resolution: {integrity: sha512-9cwHL2EsJBdi8NY22pngYYWzkTDhld6fAD6jlaeloNGciNSJL6bLpbxVgXl96X00Jtc6YWQv96YA/0sxex/k1A==}
 
+  /@vueuse/components@14.0.0(vue@3.5.24):
+    resolution: {integrity: sha512-0PFAbAzKo+Ipt45R0OVHvZwjTj9oDZJQ/lc77d020fKl9GrxEIRvVIzMW1CZVn1vwmGhXEZPIF3erjixW2yqpg==}
+    peerDependencies:
+      vue: ^3.5.0
+    dependencies:
+      '@vueuse/core': 14.0.0(vue@3.5.24)
+      '@vueuse/shared': 14.0.0(vue@3.5.24)
+      vue: 3.5.24(typescript@5.9.3)
+    dev: false
+
   /@vueuse/core@10.11.1(vue@3.5.24):
     resolution: {integrity: sha512-guoy26JQktXPcz+0n3GukWIy/JDNKti9v6VEMu6kV2sYBsWuGiTU8OWdg+ADfUbHg3/3DlqySDe7JmdHrktiww==}
     dependencies:
@@ -9506,7 +9585,18 @@ packages:
       vue: 3.5.24(typescript@5.9.3)
     dev: false
 
-  /@vueuse/integrations@13.9.0(fuse.js@7.1.0)(vue@3.5.24):
+  /@vueuse/core@14.0.0(vue@3.5.24):
+    resolution: {integrity: sha512-d6tKRWkZE8IQElX2aHBxXOMD478fHIYV+Dzm2y9Ag122ICBpNKtGICiXKOhWU3L1kKdttDD9dCMS4bGP3jhCTQ==}
+    peerDependencies:
+      vue: ^3.5.0
+    dependencies:
+      '@types/web-bluetooth': 0.0.21
+      '@vueuse/metadata': 14.0.0
+      '@vueuse/shared': 14.0.0(vue@3.5.24)
+      vue: 3.5.24(typescript@5.9.3)
+    dev: false
+
+  /@vueuse/integrations@13.9.0(axios@1.13.2)(fuse.js@7.1.0)(vue@3.5.24):
     resolution: {integrity: sha512-SDobKBbPIOe0cVL7QxMzGkuUGHvWTdihi9zOrrWaWUgFKe15cwEcwfWmgrcNzjT6kHnNmWuTajPHoIzUjYNYYQ==}
     peerDependencies:
       async-validator: ^4
@@ -9550,6 +9640,7 @@ packages:
     dependencies:
       '@vueuse/core': 13.9.0(vue@3.5.24)
       '@vueuse/shared': 13.9.0(vue@3.5.24)
+      axios: 1.13.2
       fuse.js: 7.1.0
       vue: 3.5.24(typescript@5.9.3)
     dev: false
@@ -9569,6 +9660,10 @@ packages:
 
   /@vueuse/metadata@13.9.0:
     resolution: {integrity: sha512-1AFRvuiGphfF7yWixZa0KwjYH8ulyjDCC0aFgrGRz8+P4kvDFSdXLVfTk5xAN9wEuD1J6z4/myMoYbnHoX07zg==}
+    dev: false
+
+  /@vueuse/metadata@14.0.0:
+    resolution: {integrity: sha512-6yoGqbJcMldVCevkFiHDBTB1V5Hq+G/haPlGIuaFZHpXC0HADB0EN1ryQAAceiW+ryS3niUwvdFbGiqHqBrfVA==}
     dev: false
 
   /@vueuse/nuxt@10.11.1(nuxt@3.20.1)(vue@3.5.24):
@@ -9599,6 +9694,14 @@ packages:
 
   /@vueuse/shared@13.9.0(vue@3.5.24):
     resolution: {integrity: sha512-e89uuTLMh0U5cZ9iDpEI2senqPGfbPRTHM/0AaQkcxnpqjkZqDYP8rpfm7edOz8s+pOCOROEy1PIveSW8+fL5g==}
+    peerDependencies:
+      vue: ^3.5.0
+    dependencies:
+      vue: 3.5.24(typescript@5.9.3)
+    dev: false
+
+  /@vueuse/shared@14.0.0(vue@3.5.24):
+    resolution: {integrity: sha512-mTCA0uczBgurRlwVaQHfG0Ja7UdGe4g9mwffiJmvLiTtp1G4AQyIjej6si/k8c8pUwTfVpNufck+23gXptPAkw==}
     peerDependencies:
       vue: ^3.5.0
     dependencies:
@@ -10384,6 +10487,15 @@ packages:
       - debug
     dev: true
 
+  /axios@1.13.2:
+    resolution: {integrity: sha512-VPk9ebNqPcy5lRGuSlKx752IlDatOjT9paPlm8A7yOuW2Fbvp4X3JznJtT4f0GzGLLiWE9W8onz51SqLYwzGaA==}
+    dependencies:
+      follow-redirects: 1.15.11(debug@4.4.3)
+      form-data: 4.0.4
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+
   /axios@1.9.0(debug@4.4.3):
     resolution: {integrity: sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==}
     dependencies:
@@ -11158,6 +11270,14 @@ packages:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
     dev: true
 
+  /clipboard@2.0.11:
+    resolution: {integrity: sha512-C+0bbOqkezLIsmWSvlsXS0Q0bmkugu7jcfMIACB+RDEntIzQIkdr148we28AfSloQLRdZlYL/QYyrq05j/3Faw==}
+    dependencies:
+      good-listener: 1.2.2
+      select: 1.1.2
+      tiny-emitter: 2.1.0
+    dev: false
+
   /clipboardy@4.0.0:
     resolution: {integrity: sha512-5mOlNS0mhX0707P2I0aZ2V/cmHUEO/fL7VFLqszkhUsxt7RwnmrInf/eEQKlf5GzvYeHIjT+Ov1HRfNmymlG0w==}
     engines: {node: '>=18'}
@@ -11883,6 +12003,9 @@ packages:
     resolution: {integrity: sha512-y2krtASINtPFS1rSDjacrFgn1dcUuoREVabwlOGOe4SdxenREqwjwjElAdwvbGM7kgZz9a3KVicWR7vcz8rnzA==}
     dev: false
 
+  /date-fns@4.1.0:
+    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
+
   /date.js@0.3.3:
     resolution: {integrity: sha512-HgigOS3h3k6HnW011nAb43c5xx5rBXk8P2v/WIT9Zv4koIaVXiH2BURguI78VVp+5Qc076T7OR378JViCnZtBw==}
     dependencies:
@@ -12140,6 +12263,10 @@ packages:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
 
+  /delegate@3.2.0:
+    resolution: {integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==}
+    dev: false
+
   /delegates@1.0.0:
     resolution: {integrity: sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==}
 
@@ -12273,7 +12400,6 @@ packages:
     resolution: {integrity: sha512-r+f6MYR1gGN1eJv0TVQbhA7if/U7P87cdPl3HN5rikqaBSBxLiCb/b9O+2eG0cxz0ghyU+mU1QkbsOwERMYlWQ==}
     optionalDependencies:
       '@types/trusted-types': 2.0.7
-    dev: false
 
   /domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
@@ -14122,6 +14248,12 @@ packages:
       path-type: 6.0.0
       slash: 5.1.0
       unicorn-magic: 0.3.0
+    dev: false
+
+  /good-listener@1.2.2:
+    resolution: {integrity: sha512-goW1b+d9q/HIwbVYZzZ6SsTr4IgE+WA44A0GmPIQstuOrgsFcT7VEJ48nmr9GaRtNu0XTKacFLGnBPAM6Afouw==}
+    dependencies:
+      delegate: 3.2.0
     dev: false
 
   /google-auth-library@9.15.1:
@@ -17390,7 +17522,7 @@ packages:
     engines: {node: '>=18'}
     requiresBuild: true
     dependencies:
-      axios: 1.9.0(debug@4.4.3)
+      axios: 1.13.2
       chevrotain: 10.5.0
       dayjs: 1.11.19
       jsep: 1.4.0
@@ -20190,6 +20322,10 @@ packages:
     resolution: {integrity: sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==}
     dev: true
 
+  /select@1.1.2:
+    resolution: {integrity: sha512-OwpTSOfy6xSs1+pwcNrv0RBMOzI39Lp3qQKUTPVVPRjCdNa5JH/oPRiqsesIskK8TVgmRiHwO4KXlV2Li9dANA==}
+    dev: false
+
   /selfsigned@2.4.1:
     resolution: {integrity: sha512-th5B4L2U+eGLq1TVh7zNRGBapioSORUeymIydxgFpwww9d2qyKvtuPU2jJuHvYAwwqi2Y596QBL3eEqcPEYL8Q==}
     engines: {node: '>=10'}
@@ -21607,6 +21743,10 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /tiny-emitter@2.1.0:
+    resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==}
+    dev: false
+
   /tiny-invariant@1.3.3:
     resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
     dev: false
@@ -22816,6 +22956,15 @@ packages:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: false
 
+  /vue-dompurify-html@5.3.0(vue@3.5.24):
+    resolution: {integrity: sha512-HJQGBHbfSPcb6Mu97McdKbX7TqRHZa6Ji8OCpCNyuHca5QvQZ8IiuwghFPSO8OkSQfqXPNPKFMZdCOrnGGmOSQ==}
+    peerDependencies:
+      vue: ^3.4.36
+    dependencies:
+      dompurify: 3.3.0
+      vue: 3.5.24(typescript@5.9.3)
+    dev: false
+
   /vue-eslint-parser@9.4.3(eslint@8.57.1):
     resolution: {integrity: sha512-2rYRLWlIpaiN8xbPiDyXZXRgLGOtWxERV7ND5fFAv5qo1D2N9Fu9MNajBNc6o13lZ+24DAWCkQCvj4klgmcITg==}
     engines: {node: ^14.17.0 || >=16.0.0}
@@ -22871,6 +23020,15 @@ packages:
       vue: ^3.0.0
     dependencies:
       is-plain-object: 3.0.1
+      vue: 3.5.24(typescript@5.9.3)
+    dev: false
+
+  /vue3-clipboard@1.0.0(vue@3.5.24):
+    resolution: {integrity: sha512-GUqKh1oO79xDpq0z+cCv/NDVTpcJGNDzeNgT3PmTdTp/WJh3gcTrDqIYKycKhzMFOtIFJ7hO/+usgyWtT+fNhA==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      clipboard: 2.0.11
       vue: 3.5.24(typescript@5.9.3)
     dev: false
 
