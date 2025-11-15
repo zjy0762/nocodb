@@ -68,6 +68,9 @@ importers:
       vue-router:
         specifier: ^4.4.5
         version: 4.6.3(vue@3.5.24)
+      vue3-text-clamp:
+        specifier: ^0.1.2
+        version: 0.1.2(resize-detector@0.3.0)(vue@3.5.24)
     devDependencies:
       '@esbuild-plugins/node-modules-polyfill':
         specifier: 0.2.2
@@ -19633,6 +19636,10 @@ packages:
   /requires-port@1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
 
+  /resize-detector@0.3.0:
+    resolution: {integrity: sha512-R/tCuvuOHQ8o2boRP6vgx8hXCCy87H1eY9V5imBYeVNyNVpuL9ciReSccLj2gDcax9+2weXy3bc8Vv+NRXeEvQ==}
+    dev: false
+
   /resize-observer-polyfill@1.5.1:
     resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
     dev: false
@@ -22864,6 +22871,16 @@ packages:
       vue: ^3.0.0
     dependencies:
       is-plain-object: 3.0.1
+      vue: 3.5.24(typescript@5.9.3)
+    dev: false
+
+  /vue3-text-clamp@0.1.2(resize-detector@0.3.0)(vue@3.5.24):
+    resolution: {integrity: sha512-896tGhkwaDObKL4gUv9KhR6GQQYzIzut77P2jmfUoTaJ5lJP6kLMfCUEKwGQWbDgXXkqDcoE/QV/UtP4Jn7r3Q==}
+    peerDependencies:
+      resize-detector: ^0.3.0
+      vue: ^3.2.37
+    dependencies:
+      resize-detector: 0.3.0
       vue: 3.5.24(typescript@5.9.3)
     dev: false
 
