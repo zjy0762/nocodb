@@ -78,6 +78,9 @@ importers:
       unplugin-vue-components:
         specifier: 0.26.0
         version: 0.26.0(vue@3.5.24)
+      vite-plugin-purge-icons:
+        specifier: 0.10.0
+        version: 0.10.0(vite@7.2.2)
       vue-tsc:
         specifier: ^2.1.6
         version: 2.2.12(typescript@5.9.3)
@@ -2744,6 +2747,22 @@ packages:
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
+
+  /@iconify/iconify@2.1.2:
+    resolution: {integrity: sha512-QcUzFeEWkE/mW+BVtEGmcWATClcCOIJFiYUD/PiCWuTcdEA297o8D4oN6Ra44WrNOHu1wqNW4J0ioaDIiqaFOQ==}
+    deprecated: no longer maintained, switch to modern iconify-icon web component
+    dependencies:
+      cross-fetch: 3.2.0
+    transitivePeerDependencies:
+      - encoding
+    dev: true
+
+  /@iconify/iconify@3.1.1:
+    resolution: {integrity: sha512-1nemfyD/OJzh9ALepH7YfuuP8BdEB24Skhd8DXWh0hzcOxImbb1ZizSZkpCzAwSZSGcJFmscIBaBQu+yLyWaxQ==}
+    deprecated: no longer maintained, switch to modern iconify-icon web component
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify/json@2.2.407:
     resolution: {integrity: sha512-GI81Sh05/31UyyIK2+hhMpzJb3PgvAJq/w6B0xgfQcTMwsWOaLL0QV50WNgoIHltt8FvqgR+BK/nOGnrTqugiQ==}
@@ -6442,6 +6461,25 @@ packages:
       - supports-color
     dev: false
 
+  /@purge-icons/core@0.10.0:
+    resolution: {integrity: sha512-AtJbZv5Yy+vWX5v32DPTr+CW7AkSK8HJx52orDbrYt/9s4lGM2t4KKAmwaTQEH2HYr2HVh1mlqs54/S1s3WT1g==}
+    dependencies:
+      '@iconify/iconify': 2.1.2
+      axios: 0.26.1(debug@4.4.3)
+      debug: 4.4.3(supports-color@5.5.0)
+      fast-glob: 3.3.3
+      fs-extra: 10.1.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
+  /@purge-icons/generated@0.10.0:
+    resolution: {integrity: sha512-I+1yN7/yDy/eZzfhAZqKF8Z6FM8D/O1vempbPrHJ0m9HlZwvf8sWXOArPJ2qRQGB6mJUVSpaXkoGBuoz1GQX5A==}
+    dependencies:
+      '@iconify/iconify': 3.1.1
+    dev: true
+
   /@react-email/body@0.0.11(react@19.2.0):
     resolution: {integrity: sha512-ZSD2SxVSgUjHGrB0Wi+4tu3MEpB4fYSbezsFNEJk2xCWDBkFiOeEsjTmR5dvi+CxTK691hQTQlHv0XWuP7ENTg==}
     peerDependencies:
@@ -10120,6 +10158,14 @@ packages:
     resolution: {integrity: sha512-NZKeq9AfyQvEeNlN0zSYAaWrmBffJh3IELMZfRpJVWgrpEbtEpnjvzqBPf+mxoI287JohRDoa+/nsfqqiZmF6g==}
     engines: {node: '>= 6.0.0'}
 
+  /axios@0.26.1(debug@4.4.3):
+    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
+    dependencies:
+      follow-redirects: 1.15.11(debug@4.4.3)
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
   /axios@1.9.0(debug@4.4.3):
     resolution: {integrity: sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==}
     dependencies:
@@ -11285,6 +11331,14 @@ packages:
     hasBin: true
     dependencies:
       cross-spawn: 7.0.6
+    dev: true
+
+  /cross-fetch@3.2.0:
+    resolution: {integrity: sha512-Q+xVJLoGOeIMXZmbUK4HYk+69cQH6LudR0Vu/pRm2YlU/hDV9CiS0gKUMaWY5f2NeUH9C1nV3bsTlCo0FsTV1Q==}
+    dependencies:
+      node-fetch: 2.7.0
+    transitivePeerDependencies:
+      - encoding
     dev: true
 
   /cross-spawn@6.0.6:
@@ -19163,6 +19217,17 @@ packages:
       rollup-plugin-inject: 3.0.2
     dev: true
 
+  /rollup-plugin-purge-icons@0.10.0:
+    resolution: {integrity: sha512-GD2ftg4L9G/sagIhtCmBn5vdyzePOisniythubpbywP0Q3ix9rZuDeFvgXTPemOsc22pvH7t22ryYQIl0rwGog==}
+    engines: {node: '>= 12'}
+    dependencies:
+      '@purge-icons/core': 0.10.0
+      '@purge-icons/generated': 0.10.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
   /rollup-plugin-visualizer@6.0.5(rollup@4.53.2):
     resolution: {integrity: sha512-9+HlNgKCVbJDs8tVtjQ43US12eqaiHyyiLMdBwQ7vSZPiHMysGNo2E88TAp1si5wx8NAoYriI2A5kuKfIakmJg==}
     engines: {node: '>=18'}
@@ -21833,6 +21898,21 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
+
+  /vite-plugin-purge-icons@0.10.0(vite@7.2.2):
+    resolution: {integrity: sha512-4fMJKQuBu9lAPJWjqGEytRaxty1pP9bWgQLA68dwbbaCXu6NBrOUb/3kMaUc7TP09kerEk+qTriCk05OZXpjwA==}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      vite: '>=2'
+    dependencies:
+      '@purge-icons/core': 0.10.0
+      '@purge-icons/generated': 0.10.0
+      rollup-plugin-purge-icons: 0.10.0
+      vite: 7.2.2(@types/node@22.19.1)(jiti@2.6.1)
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
 
   /vite-plugin-vue-tracer@1.1.3(vite@7.2.2)(vue@3.5.24):
     resolution: {integrity: sha512-fM7hfHELZvbPnSn8EKZwHfzxm5EfYFQIclz8rwcNXfodNbRkwNvh0AGMtaBfMxQ9HC5KVa3KitwHnmE4ezDemw==}
