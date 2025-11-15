@@ -17,6 +17,7 @@
     "@vueuse/nuxt": "10.11.1",
     "nuxt": "^3.20.1",
     "nuxt-icon": "1.0.0-beta.7",
+    "nuxt-windicss": "^3.0.1",
     "pinia": "^2.2.4",
     "vue": "^3.5.24",
     "vue-i18n": "^9.10.0",
