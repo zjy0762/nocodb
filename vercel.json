@@ -3,6 +3,5 @@
   "buildCommand": "pnpm run frontend:build",
   "outputDirectory": "packages/nc-gui/.output",
   "installCommand": "pnpm install --hoist",
-  "framework": "nuxtjs",
-  "node": "18.x"
+  "framework": "nuxtjs"
 }
