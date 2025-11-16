@@ -31,7 +31,6 @@
     "nuxt-icon": "1.0.0-beta.7",
     "nuxt-windicss": "^3.0.1",
     "pdfobject": "^2.3.0",
-    "pdfobject-vue": "^0.0.5",
     "pinia": "^2.2.4",
     "vue": "^3.5.24",
     "vue-dompurify-html": "^5.3.0",
