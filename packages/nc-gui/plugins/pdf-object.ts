@@ -1,5 +1,4 @@
-import PDFObjectPlugin from 'pdfobject-vue'
-
+import PDFObject from 'pdfobject'
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.use(PDFObjectPlugin)
+  nuxtApp.provide('pdfobject', PDFObject)
 })
