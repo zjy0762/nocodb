@@ -1,7 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run frontend:build",
+  "buildCommand": "cd packages/nc-gui && pnpm run frontend:build",
   "outputDirectory": "packages/nc-gui/.output",
-  "installCommand": "pnpm install --hoist",
-  "framework": "nuxtjs"
+  "installCommand": "pnpm install",
+  "framework": "nuxtjs",
+  "workspace": {
+    "root": true,
+    "packages": ["packages/*"]
+  }
 }
