@@ -7,11 +7,5 @@
   "workspace": {
     "root": true,
     "packages": ["packages/*"]
-  },
-  "build": {
-    "env": {
-      "NODE_ENV": "production",
-      "NUXT_BUILD_TARGET": "vercel"
-    }
   }
 }
