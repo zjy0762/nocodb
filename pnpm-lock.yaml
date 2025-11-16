@@ -84,8 +84,8 @@ importers:
         specifier: ^2.2.4
         version: 2.3.1(typescript@5.9.3)(vue@3.5.24)
       socket.io-client:
-        specifier: ^4.8.0
-        version: 4.8.1
+        specifier: 4.8.0
+        version: 4.8.0
       vue:
         specifier: ^3.5.24
         version: 3.5.24(typescript@5.9.3)
@@ -139,7 +139,7 @@ importers:
         specifier: ^2.2.5
         version: 2.2.5
       '@types/socket.io-client':
-        specifier: ^1.4.36
+        specifier: 1.4.36
         version: 1.4.36
       '@windicss/plugin-animations':
         specifier: ^1.0.9
@@ -20855,8 +20855,8 @@ packages:
       - supports-color
       - utf-8-validate
 
-  /socket.io-client@4.8.1:
-    resolution: {integrity: sha512-hJVXfu3E28NmzGk8o1sHhN3om52tRvwYeidbj7xKy2eIIse5IoKX3USlS6Tqt3BHAtflLIkCQBkzVrEEfWUyYQ==}
+  /socket.io-client@4.8.0:
+    resolution: {integrity: sha512-C0jdhD5yQahMws9alf/yvtsMGTaIDBnZ8Rb5HU56svyq0l5LIrGzIDZZD5pHQlmzxLuU91Gz+VpQMKgCTNYtkw==}
     engines: {node: '>=10.0.0'}
     dependencies:
       '@socket.io/component-emitter': 3.1.2
