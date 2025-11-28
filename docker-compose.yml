@@ -1,0 +1,49 @@
+services:
+  app:
+    image: nocodb/nocodb:latest  # 官方镜像，稳定无构建风险
+    ports:
+      - "${PORT:-8081}:8080"  # 端口映射，默认8081，支持.env自定义
+    environment:
+      - NC_DB=pg://db:5432?u=${POSTGRES_USER}&p=${POSTGRES_PASSWORD}&d=${POSTGRES_DB}  # 关联PostgreSQL
+      - NC_AUTH_JWT_SECRET=${JWT_SECRET}  # JWT密钥，需在.env中配置
+      - NC_REDIS_URL=redis://:${REDIS_PASSWORD}@redis:6379  # 补充Redis连接配置（关键）
+    volumes:
+      - nocodb_data:/usr/app/data  # 持久化Nocodb数据
+    depends_on:
+      db:
+        condition: service_healthy  # 等待PostgreSQL健康后启动
+      redis:
+        condition: service_healthy  # 等待Redis健康后启动
+    restart: unless-stopped  # 异常自动重启
+
+  db:
+    image: postgres:14-alpine  # 稳定版PostgreSQL，轻量高效
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}  # 从.env读取用户名
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}  # 从.env读取密码
+      POSTGRES_DB: ${POSTGRES_DB}  # 从.env读取数据库名
+    volumes:
+      - pg_data:/var/lib/postgresql/data  # 持久化PostgreSQL数据
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]  # 精准检查指定数据库
+      interval: 10s  # 检查间隔
+      timeout: 5s  # 超时时间
+      retries: 5  # 重试次数
+    restart: unless-stopped
+
+  redis:
+    image: redis:alpine  # 轻量版Redis
+    command: redis-server --requirepass ${REDIS_PASSWORD}  # 启用密码认证
+    volumes:
+      - redis_data:/data  # 持久化Redis数据
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]  # 带密码健康检查（核心修复）
+      interval: 10s  # 检查间隔
+      timeout: 5s  # 超时时间
+      retries: 5  # 重试次数
+    restart: unless-stopped
+
+volumes:
+  nocodb_data:  # Nocodb数据卷
+  pg_data:  # PostgreSQL数据卷
+  redis_data:  # Redis数据卷
